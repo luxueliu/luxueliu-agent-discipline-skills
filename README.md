@@ -1,6 +1,6 @@
-# luxueliu-agent-discipline-skills
+# AI 不缺聪明，缺纪律：4 个给 agent 的工程刹车
 
-> 🛡️ **AI 不缺聪明，缺纪律——4 个让 agent 少闯祸、不虚报、能接力的硬核 SKILL**
+> 🛡️ **luxueliu-agent-discipline-skills** — 让 agent 少闯祸、不虚报、能接力的硬核 SKILL，DeepSeek Harness / Claude Code / Codex 通用。
 
 一套经过数百小时真实多 agent 协作打磨的 **agent 纪律 skills**（DeepSeek Harness / Claude Code / Codex 通用）。不是 prompt 小技巧，是给 AI 装的**工程刹车与交接规程**：交付前自检、跑偏纠偏、根因调试、多 agent 接力。
 
