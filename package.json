@@ -1,0 +1,45 @@
+{
+  "name": "luxueliu-agent-discipline-skills",
+  "version": "0.1.0",
+  "description": "AI 不缺聪明，缺纪律：交付前自检、跑偏纠偏、系统化调试、多 agent 接力。4 个单文件 SKILL，装上即拷进 ~/.dsh/skills/。",
+  "main": "lib/index.js",
+  "type": "module",
+  "exports": {
+    ".": "./lib/index.js",
+    "./dsh": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "skills",
+    "cordis.patch.yml",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "check": "node --check lib/index.js"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "agent-skills",
+    "claude-code",
+    "codex-cli"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luxueliu/luxueliu-agent-discipline-skills.git"
+  },
+  "homepage": "https://github.com/luxueliu/luxueliu-agent-discipline-skills#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {},
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

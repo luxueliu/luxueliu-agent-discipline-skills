@@ -2,6 +2,8 @@
 
 > 🛡️ **luxueliu-agent-discipline-skills** — 让 agent 少闯祸、不虚报、能接力的硬核 SKILL，DeepSeek Harness / Claude Code / Codex 通用。
 
+[![dsh-plugin](https://img.shields.io/badge/dsh-plugin-%2300b4ff)](https://github.com/topics/dsh-plugin)
+
 一套经过数百小时真实多 agent 协作打磨的 **agent 纪律 skills**（DeepSeek Harness / Claude Code / Codex 通用）。不是 prompt 小技巧，是给 AI 装的**工程刹车与交接规程**：交付前自检、跑偏纠偏、根因调试、多 agent 接力。
 
 由 [luxueliu](https://github.com/luxueliu) 制作并开源。每个 skill 都是单文件 `SKILL.md`，零依赖，装上即用。
@@ -23,19 +25,19 @@
 
 ## 安装
 
-要求：任何支持 Agent Skills 规范（`SKILL.md` + YAML frontmatter）的环境。DeepSeek Harness / Claude Code / Codex CLI 均可直接用。
-
 ```powershell
-# 方式一：整仓克隆后按 skill 复制
-git clone https://github.com/luxueliu/luxueliu-agent-discipline-skills
-# 把需要的 skill 目录拷进你的技能目录：
-Copy-Item -Recurse luxueliu-agent-discipline-skills\skills\deepcode-review ~/.dsh/skills/
-
-# 方式二：DSH Web 用户（用户级技能目录）
-# %USERPROFILE%\.dsh\skills\<skill-name>\SKILL.md
+# DSH：装完会把 4 个 skill 拷进 ~/.dsh/skills/
+dsh plugin --profile web add luxueliu/luxueliu-agent-discipline-skills
 ```
 
-重启会话后，skill 会按各自 description 里的触发条件自动加载，也可以点名调用。
+也可手动拷贝（Claude Code / Codex / 不走 DSH 插件市场时）：
+
+```powershell
+git clone https://github.com/luxueliu/luxueliu-agent-discipline-skills
+Copy-Item -Recurse luxueliu-agent-discipline-skills\skills\deepcode-review ~/.dsh/skills\
+```
+
+用户级技能目录：`%USERPROFILE%\.dsh\skills\<skill-name>\SKILL.md`。重启会话后按 description 自动加载，也可点名调用。
 
 ## 触发方式（节选）
 
